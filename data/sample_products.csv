@@ -1,0 +1,6 @@
+product_id,product_name,category,brand,price,discount,rating,num_reviews,stock
+1,Wireless Mouse,Electronics,LogiTech,25,0.10,4.5,210,50
+2,Laptop Pro,Electronics,Lenovo,1200,0.15,4.6,120,30
+3,Noise Headphones,Electronics,Sony,45,0.20,4.2,300,60
+4,Gaming Laptop,Electronics,Asus,12000,0.05,4.7,80,15
+5,USB Cable,Accessories,,5,0.05,4.0,150,200
