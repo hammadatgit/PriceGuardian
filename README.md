@@ -1,63 +1,79 @@
-<<<<<<< HEAD
 ---
 
-# PriceGuardian — Smart Product Pricing Audit & Insight Engine
+# PriceGuardian — Intelligent Product Pricing Audit System
 
-PriceGuardian is a **CLI-based analytics system** that audits e-commerce product datasets to detect pricing anomalies, clean messy data, generate business insights, and export automated analysis reports.
+**PriceGuardian** is a **CLI-based analytics engine** that automatically audits product datasets to discover **pricing anomalies, discount irregularities, feature relationships, and data quality issues**.
 
-The project simulates a **real-world product data auditing workflow** where datasets must be validated, cleaned, analyzed, and inspected for pricing inconsistencies before being used in analytics or decision systems.
+The system simulates a **real-world e-commerce analytics workflow**, where messy product data must be analyzed before making pricing or marketing decisions.
+
+PriceGuardian performs:
+
+* Dataset health auditing
+* Automatic preprocessing pipelines
+* Smart column detection
+* Feature engineering
+* Exploratory Data Analysis (EDA)
+* Pricing anomaly detection
+* Feature profiling
+* Automated insight generation
+* Full pricing audit reports
 
 ---
 
 # Project Goals
 
-This project demonstrates a **complete dataset auditing pipeline** including:
+This project demonstrates an **end-to-end data analytics and preprocessing pipeline** including:
 
-* Dataset validation and health inspection
-* Automated data cleaning using preprocessing pipelines
-* Feature engineering for pricing behavior analysis
-* Exploratory Data Analysis (EDA)
-* Statistical anomaly detection
-* Automated insight generation
-* Dataset-specific report generation
+* Dataset auditing
+* Smart schema detection
+* Data preprocessing pipelines
+* Feature engineering
+* Exploratory Data Analysis
+* Anomaly detection
+* Automated reporting
 * CLI-based analytics workflow
-* Modular Python project architecture
+* Modular ML-ready architecture
+
+The project also simulates **real e-commerce pricing analytics**, helping detect suspicious product prices and discount patterns.
 
 ---
 
 # Workflow Pipeline
 
-The project follows a structured **data auditing pipeline**:
+The system follows a structured **analytics pipeline**:
 
 ```
-Dataset Input
-     │
-     ▼
-Load Dataset
-     │
-     ▼
-Dataset Health Check
-     │
-     ▼
+Raw Product Dataset
+        │
+        ▼
+Dataset Loader
+        │
+        ▼
+Smart Column Detection
+        │
+        ▼
+Dataset Health Audit
+        │
+        ▼
 Automatic Data Cleaning
-     │
-     ▼
+        │
+        ▼
 Feature Engineering
-     │
-     ▼
+        │
+        ▼
 Exploratory Data Analysis
-     │
-     ▼
-Pricing Anomaly Detection
-     │
-     ▼
+        │
+        ▼
+Anomaly Detection
+        │
+        ▼
 Feature Profiling
-     │
-     ▼
-Pricing Insights Generation
-     │
-     ▼
-Audit Report & Visualizations
+        │
+        ▼
+Insight Generation
+        │
+        ▼
+Pricing Audit Report
 ```
 
 ---
@@ -79,6 +95,7 @@ modules/
     feature_profiler.py
     pricing_patterns.py
     report_generator.py
+    schema_detector.py
 
 pipelines/
     preprocessing_pipeline.py
@@ -90,14 +107,13 @@ cli/
     dashboard.py
 
 results/
-    dataset_name/
-        cleaned_dataset.csv
+    sample_products/
+        plots/
         dataset_health.json
         anomaly_report.json
         feature_profile.json
         pricing_insights.json
         pricing_audit_report.json
-        plots/
 
 main.py
 requirements.txt
@@ -106,33 +122,66 @@ README.md
 
 ---
 
-# Features
+# Key Features
 
-✔ Dataset management system for multiple CSV datasets
-✔ Dataset health inspection and validation
-✔ Automated preprocessing pipeline using Scikit-Learn
-✔ Feature engineering for pricing analysis
-✔ Exploratory Data Analysis (EDA) visualizations
-✔ Statistical anomaly detection for suspicious prices
+✔ Smart dataset loading
+✔ Automatic dataset health analysis
+✔ ML preprocessing pipeline using Scikit-Learn
+✔ Automatic feature engineering
+✔ Exploratory Data Analysis visualizations
+✔ Pricing anomaly detection (Z-Score & IQR)
 ✔ Feature statistical profiling
-✔ Automated pricing insight generation
-✔ Dataset-specific report storage
-✔ CLI-based interactive analytics workflow
+✔ Business insight generation
+✔ Full audit report generation
+✔ CLI-based analytics workflow
+
+---
+
+# Smart Column Detection (Auto Dataset Understanding)
+
+Real datasets often use **different column names**.
+
+Example variations:
+
+```
+price
+product_price
+sale_price
+item_price
+```
+
+PriceGuardian includes a **Schema Detection Engine** that automatically detects dataset roles.
+
+Example detected schema:
+
+```
+Detected Columns
+
+Price column: product_price
+Discount column: sale_discount
+Rating column: customer_rating
+Review count column: reviews_count
+Category column: product_category
+```
+
+This allows PriceGuardian to work with **any product dataset without manual configuration**.
 
 ---
 
 # Python Concepts Covered
 
-* Pandas data manipulation
-* NumPy numerical operations
-* Data preprocessing pipelines (Scikit-Learn)
-* Feature engineering techniques
-* Exploratory Data Analysis (EDA)
+This project demonstrates practical implementation of:
+
+* Pandas data analysis
+* Scikit-Learn preprocessing pipelines
+* Feature engineering
+* Exploratory Data Analysis
 * Data visualization (Matplotlib, Seaborn)
-* Statistical anomaly detection (Z-Score, IQR)
-* Modular Python project architecture
-* CLI application development
-* Automated report generation
+* Z-Score and IQR anomaly detection
+* JSON report generation
+* CLI tool development
+* Modular Python architecture
+* Real-world data preprocessing workflows
 
 ---
 
@@ -174,56 +223,50 @@ pip install -r requirements.txt
 
 # Running the Tool
 
-Start the CLI dashboard
+Run the CLI dashboard:
 
 ```
 python main.py
 ```
 
-Example interface:
+Example CLI session:
 
 ```
 PriceGuardian – Product Pricing Audit Tool
 
-Select dataset option:
+Available datasets:
 
-1 Use sample dataset
-2 Upload new dataset
-3 Choose dataset from data folder
-4 Exit
+1. sample_products.csv
+
+Select dataset number: 1
 ```
 
-After loading a dataset, available actions include:
+---
 
-```
-1 Check Dataset Health
-2 Clean Dataset Automatically
-3 Discover Pricing Patterns
-4 Find Suspicious Products
-5 View Product Category Insights
-6 Generate Full Pricing Audit Report
-7 Export Clean Dataset
-```
+# CLI Menu Options
+
+| Command                    | Function                     |
+| -------------------------- | ---------------------------- |
+| Check Dataset Health       | Analyze dataset quality      |
+| Clean Dataset              | Apply preprocessing pipeline |
+| Discover Pricing Patterns  | Generate engineered features |
+| Find Suspicious Products   | Detect price anomalies       |
+| View Product Insights      | Generate EDA visualizations  |
+| Generate Full Audit Report | Export full analytics report |
 
 ---
 
 # Generated Outputs
 
-Analysis results are automatically stored per dataset:
-
-```
-results/dataset_name/
-```
-
-Example outputs:
-
-Cleaned dataset
-
-```
-cleaned_dataset.csv
-```
+PriceGuardian automatically generates analytics reports.
 
 Reports
+
+```
+results/sample_products/
+```
+
+Tables
 
 ```
 dataset_health.json
@@ -233,474 +276,101 @@ pricing_insights.json
 pricing_audit_report.json
 ```
 
-Visualizations
+Plots
 
 ```
-results/dataset_name/plots/
+results/sample_products/plots/
 ```
+
+Example plots:
+
+* Price distribution
+* Rating distribution
+* Correlation heatmap
 
 ---
 
 # Example Insights
 
-Example insights generated by PriceGuardian:
+Example insights generated by the system:
 
 ```
-Average product price: $82.40
+Average product price in dataset: 145.20
 
-Products with discounts above 40% show
-lower average customer ratings.
+Products with discount > 40% have average rating 3.8
 
-Electronics category displays the highest
-price variation across products.
+Price anomalies detected in 3 products
 ```
-
----
-
-# Example Visualizations
-
-Generated charts include:
-
-* Product price distribution
-* Rating distribution
-* Discount distribution
-* Correlation heatmap between numeric features
-
-These visualizations help understand **pricing behavior across product categories**.
 
 ---
 
 # Dataset Description
 
-The project includes a **sample e-commerce product dataset**.
+The included sample dataset simulates **an e-commerce product catalog**.
 
-The dataset contains product attributes such as:
+Intentional issues included:
 
-```
-product_id
-product_name
-category
-brand
-price
-discount
-rating
-num_reviews
-stock
-```
+* missing values
+* extreme price values
+* inconsistent brands
+* discount irregularities
 
-Intentional data issues are included to simulate real-world scenarios:
-
-* missing brand names
-* inconsistent ratings
-* extreme product prices
-* abnormal discount values
-
-This enables realistic **data cleaning and anomaly detection workflows**.
+This simulates **real-world messy datasets used by data analysts and ML engineers.**
 
 ---
 
-# Data Auditing Architecture
+# Data Pipeline Architecture
 
 ```
-              Product Dataset
-                     │
-                     ▼
-               Dataset Loader
-                     │
-                     ▼
-              Dataset Health Check
-                     │
-                     ▼
-              Data Cleaning Pipeline
-                     │
-                     ▼
-             Feature Engineering Engine
-                     │
-                     ▼
-            Pricing Anomaly Detector
-                     │
-                     ▼
-             Feature Profiling System
-                     │
-                     ▼
-           Insight & Report Generator
-                     │
-                     ▼
-               Reports & Plots
+                Raw Dataset
+                      │
+                      ▼
+                Dataset Loader
+                      │
+                      ▼
+             Schema Detection Engine
+                      │
+                      ▼
+              Dataset Health Analyzer
+                      │
+                      ▼
+            Automatic Cleaning Pipeline
+                      │
+                      ▼
+               Feature Engineering
+                      │
+                      ▼
+                EDA Visualization
+                      │
+                      ▼
+              Anomaly Detection
+                      │
+                      ▼
+               Insight Generator
+                      │
+                      ▼
+               Audit Report Export
 ```
 
 ---
 
 # Future Improvements
 
-Possible extensions for the project:
+Possible extensions:
 
-* automatic dataset schema detection
-* intelligent column role inference
-* natural language insight generation
-* batch analysis for multiple datasets
-* interactive analytics dashboard
-* automated PDF report generation
+* Interactive dashboard (Streamlit)
+* Natural language insight generation
+* Automatic dataset schema learning
+* ML-based price prediction
+* PDF audit reports
+* Batch analysis of multiple datasets
 
 ---
 
 # Author
 
-PriceGuardian — ML Roadmap Portfolio Project
-Hands-on Python project focused on **data analytics pipelines, pricing anomaly detection, and automated insight generation.**
+**PriceGuardian — ML Roadmap Portfolio Project**
+
+Built as part of a **hands-on machine learning engineering learning roadmap** focusing on **data preprocessing, feature engineering, EDA, and anomaly detection.**
 
 ---
-=======
----
-
-# PriceGuardian — Smart Product Pricing Audit & Insight Engine
-
-PriceGuardian is a **CLI-based analytics system** that audits e-commerce product datasets to detect pricing anomalies, clean messy data, generate business insights, and export automated analysis reports.
-
-The project simulates a **real-world product data auditing workflow** where datasets must be validated, cleaned, analyzed, and inspected for pricing inconsistencies before being used in analytics or decision systems.
-
----
-
-# Project Goals
-
-This project demonstrates a **complete dataset auditing pipeline** including:
-
-* Dataset validation and health inspection
-* Automated data cleaning using preprocessing pipelines
-* Feature engineering for pricing behavior analysis
-* Exploratory Data Analysis (EDA)
-* Statistical anomaly detection
-* Automated insight generation
-* Dataset-specific report generation
-* CLI-based analytics workflow
-* Modular Python project architecture
-
----
-
-# Workflow Pipeline
-
-The project follows a structured **data auditing pipeline**:
-
-```
-Dataset Input
-     │
-     ▼
-Load Dataset
-     │
-     ▼
-Dataset Health Check
-     │
-     ▼
-Automatic Data Cleaning
-     │
-     ▼
-Feature Engineering
-     │
-     ▼
-Exploratory Data Analysis
-     │
-     ▼
-Pricing Anomaly Detection
-     │
-     ▼
-Feature Profiling
-     │
-     ▼
-Pricing Insights Generation
-     │
-     ▼
-Audit Report & Visualizations
-```
-
----
-
-# Project Structure
-
-```
-priceguardian
-
-data/
-    sample_products.csv
-
-modules/
-    loader.py
-    dataset_health.py
-    data_cleaner.py
-    feature_builder.py
-    anomaly_detector.py
-    feature_profiler.py
-    pricing_patterns.py
-    report_generator.py
-
-pipelines/
-    preprocessing_pipeline.py
-
-visualization/
-    plots.py
-
-cli/
-    dashboard.py
-
-results/
-    dataset_name/
-        cleaned_dataset.csv
-        dataset_health.json
-        anomaly_report.json
-        feature_profile.json
-        pricing_insights.json
-        pricing_audit_report.json
-        plots/
-
-main.py
-requirements.txt
-README.md
-```
-
----
-
-# Features
-
-✔ Dataset management system for multiple CSV datasets   
-✔ Dataset health inspection and validation    
-✔ Automated preprocessing pipeline using Scikit-Learn      
-✔ Feature engineering for pricing analysis     
-✔ Exploratory Data Analysis (EDA) visualizations     
-✔ Statistical anomaly detection for suspicious prices     
-✔ Feature statistical profiling     
-✔ Automated pricing insight generation    
-✔ Dataset-specific report storage    
-✔ CLI-based interactive analytics workflow    
-
----
-
-# Python Concepts Covered
-
-* Pandas data manipulation
-* NumPy numerical operations
-* Data preprocessing pipelines (Scikit-Learn)
-* Feature engineering techniques
-* Exploratory Data Analysis (EDA)
-* Data visualization (Matplotlib, Seaborn)
-* Statistical anomaly detection (Z-Score, IQR)
-* Modular Python project architecture
-* CLI application development
-* Automated report generation
-
----
-
-# Installation
-
-Clone the repository
-
-```
-git clone https://github.com/yourusername/priceguardian
-```
-
-Navigate to the project folder
-
-```
-cd priceguardian
-```
-
-Create virtual environment
-
-```
-python -m venv venv
-```
-
-Activate environment
-
-Windows:
-
-```
-venv\Scripts\activate
-```
-
-Install dependencies
-
-```
-pip install -r requirements.txt
-```
-
----
-
-# Running the Tool
-
-Start the CLI dashboard
-
-```
-python main.py
-```
-
-Example interface:
-
-```
-PriceGuardian – Product Pricing Audit Tool
-
-Select dataset option:
-
-1 Use sample dataset
-2 Upload new dataset
-3 Choose dataset from data folder
-4 Exit
-```
-
-After loading a dataset, available actions include:
-
-```
-1 Check Dataset Health
-2 Clean Dataset Automatically
-3 Discover Pricing Patterns
-4 Find Suspicious Products
-5 View Product Category Insights
-6 Generate Full Pricing Audit Report
-7 Export Clean Dataset
-```
-
----
-
-# Generated Outputs
-
-Analysis results are automatically stored per dataset:
-
-```
-results/dataset_name/
-```
-
-Example outputs:
-
-Cleaned dataset
-
-```
-cleaned_dataset.csv
-```
-
-Reports
-
-```
-dataset_health.json
-feature_profile.json
-anomaly_report.json
-pricing_insights.json
-pricing_audit_report.json
-```
-
-Visualizations
-
-```
-results/dataset_name/plots/
-```
-
----
-
-# Example Insights
-
-Example insights generated by PriceGuardian:
-
-```
-Average product price: $82.40
-
-Products with discounts above 40% show
-lower average customer ratings.
-
-Electronics category displays the highest
-price variation across products.
-```
-
----
-
-# Example Visualizations
-
-Generated charts include:
-
-* Product price distribution
-* Rating distribution
-* Discount distribution
-* Correlation heatmap between numeric features
-
-These visualizations help understand **pricing behavior across product categories**.
-
----
-
-# Dataset Description
-
-The project includes a **sample e-commerce product dataset**.
-
-The dataset contains product attributes such as:
-
-```
-product_id
-product_name
-category
-brand
-price
-discount
-rating
-num_reviews
-stock
-```
-
-Intentional data issues are included to simulate real-world scenarios:
-
-* missing brand names
-* inconsistent ratings
-* extreme product prices
-* abnormal discount values
-
-This enables realistic **data cleaning and anomaly detection workflows**.
-
----
-
-# Data Auditing Architecture
-
-```
-              Product Dataset
-                     │
-                     ▼
-               Dataset Loader
-                     │
-                     ▼
-              Dataset Health Check
-                     │
-                     ▼
-              Data Cleaning Pipeline
-                     │
-                     ▼
-             Feature Engineering Engine
-                     │
-                     ▼
-            Pricing Anomaly Detector
-                     │
-                     ▼
-             Feature Profiling System
-                     │
-                     ▼
-           Insight & Report Generator
-                     │
-                     ▼
-               Reports & Plots
-```
-
----
-
-# Future Improvements
-
-Possible extensions for the project:
-
-* automatic dataset schema detection
-* intelligent column role inference
-* natural language insight generation
-* batch analysis for multiple datasets
-* interactive analytics dashboard
-* automated PDF report generation
-
----
-
-# Author
-
-PriceGuardian — ML Roadmap Portfolio Project
-Hands-on Python project focused on **data analytics pipelines, pricing anomaly detection, and automated insight generation.**
-
----
-
->>>>>>> 29284f371a9108215054de3d53eb9ad1a06f4776
