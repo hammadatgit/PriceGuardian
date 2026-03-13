@@ -1,4 +1,3 @@
----
 
 # PriceGuardian — Intelligent Product Pricing Audit System
 
@@ -36,7 +35,6 @@ This project demonstrates an **end-to-end data analytics and preprocessing pipel
 
 The project also simulates **real e-commerce pricing analytics**, helping detect suspicious product prices and discount patterns.
 
----
 
 # Workflow Pipeline
 
@@ -124,16 +122,16 @@ README.md
 
 # Key Features
 
-✔ Smart dataset loading
-✔ Automatic dataset health analysis
-✔ ML preprocessing pipeline using Scikit-Learn
-✔ Automatic feature engineering
-✔ Exploratory Data Analysis visualizations
-✔ Pricing anomaly detection (Z-Score & IQR)
-✔ Feature statistical profiling
-✔ Business insight generation
-✔ Full audit report generation
-✔ CLI-based analytics workflow
+✔ Smart dataset loading            
+✔ Automatic dataset health analysis     
+✔ ML preprocessing pipeline using Scikit-Learn   
+✔ Automatic feature engineering    
+✔ Exploratory Data Analysis visualizations        
+✔ Pricing anomaly detection (Z-Score & IQR)       
+✔ Feature statistical profiling          
+✔ Business insight generation          
+✔ Full audit report generation      
+✔ CLI-based analytics workflow     
 
 ---
 
