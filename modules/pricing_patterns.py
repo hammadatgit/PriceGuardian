@@ -2,25 +2,29 @@ import json
 import os
 
 
-def generate_insights(df):
+def generate_insights(df, schema):
 
     insights = []
 
-    if "discount" in df.columns and "rating" in df.columns:
+    price_col = schema.get("price")
+    discount_col = schema.get("discount")
+    rating_col = schema.get("rating")
 
-        high_discount = df[df["discount"] > 0.4]
+    if discount_col and rating_col:
+
+        high_discount = df[df[discount_col] > 0.4]
 
         if len(high_discount) > 0:
 
-            avg_rating = high_discount["rating"].mean()
+            avg_rating = high_discount[rating_col].mean()
 
             insights.append(
                 f"Products with discount >40% have average rating {avg_rating:.2f}"
             )
 
-    if "price" in df.columns:
+    if price_col:
 
-        avg_price = df["price"].mean()
+        avg_price = df[price_col].mean()
 
         insights.append(
             f"Average product price in dataset: {avg_price:.2f}"

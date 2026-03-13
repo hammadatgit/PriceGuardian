@@ -1,0 +1,27 @@
+{
+    "rows": 5,
+    "columns": 9,
+    "missing_values": {
+        "product_id": 0,
+        "product_name": 0,
+        "category": 0,
+        "brand": 1,
+        "price": 0,
+        "discount": 0,
+        "rating": 0,
+        "num_reviews": 0,
+        "stock": 0
+    },
+    "duplicate_rows": 0,
+    "data_types": {
+        "product_id": "int64",
+        "product_name": "object",
+        "category": "object",
+        "brand": "object",
+        "price": "int64",
+        "discount": "float64",
+        "rating": "float64",
+        "num_reviews": "int64",
+        "stock": "int64"
+    }
+}

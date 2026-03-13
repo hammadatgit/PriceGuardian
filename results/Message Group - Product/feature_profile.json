@@ -1,0 +1,26 @@
+{
+    "S.No": {
+        "mean": 2283.5,
+        "std": 1318.2349942252329,
+        "min": 1.0,
+        "max": 4566.0
+    },
+    "SellPrice": {
+        "mean": 2005.2227332457294,
+        "std": 2259.6149152136336,
+        "min": 89.0,
+        "max": 25995.0
+    },
+    "Discount": {
+        "mean": NaN,
+        "std": NaN,
+        "min": NaN,
+        "max": NaN
+    },
+    "final_price": {
+        "mean": NaN,
+        "std": NaN,
+        "min": NaN,
+        "max": NaN
+    }
+}

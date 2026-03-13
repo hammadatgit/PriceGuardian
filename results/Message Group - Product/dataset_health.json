@@ -1,0 +1,31 @@
+{
+    "rows": 4566,
+    "columns": 11,
+    "missing_values": {
+        "S.No": 0,
+        "BrandName": 0,
+        "Product ID": 0,
+        "Product Name": 0,
+        "Brand Desc": 0,
+        "Product Size": 0,
+        "Currancy": 0,
+        "MRP": 13,
+        "SellPrice": 0,
+        "Discount": 0,
+        "Category": 0
+    },
+    "duplicate_rows": 0,
+    "data_types": {
+        "S.No": "int64",
+        "BrandName": "object",
+        "Product ID": "object",
+        "Product Name": "object",
+        "Brand Desc": "object",
+        "Product Size": "object",
+        "Currancy": "object",
+        "MRP": "object",
+        "SellPrice": "int64",
+        "Discount": "object",
+        "Category": "object"
+    }
+}

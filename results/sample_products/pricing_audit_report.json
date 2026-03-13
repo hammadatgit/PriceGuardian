@@ -1,0 +1,95 @@
+{
+    "dataset_health.json": {
+        "rows": 5,
+        "columns": 9,
+        "missing_values": {
+            "product_id": 0,
+            "product_name": 0,
+            "category": 0,
+            "brand": 1,
+            "price": 0,
+            "discount": 0,
+            "rating": 0,
+            "num_reviews": 0,
+            "stock": 0
+        },
+        "duplicate_rows": 0,
+        "data_types": {
+            "product_id": "int64",
+            "product_name": "object",
+            "category": "object",
+            "brand": "object",
+            "price": "int64",
+            "discount": "float64",
+            "rating": "float64",
+            "num_reviews": "int64",
+            "stock": "int64"
+        }
+    },
+    "feature_profile.json": {
+        "product_id": {
+            "mean": 3.0,
+            "std": 1.5811388300841898,
+            "min": 1.0,
+            "max": 5.0
+        },
+        "price": {
+            "mean": 2655.0,
+            "std": 5248.751041914638,
+            "min": 5.0,
+            "max": 12000.0
+        },
+        "discount": {
+            "mean": 0.11000000000000001,
+            "std": 0.0651920240520265,
+            "min": 0.05,
+            "max": 0.2
+        },
+        "rating": {
+            "mean": 4.4,
+            "std": 0.29154759474226494,
+            "min": 4.0,
+            "max": 4.7
+        },
+        "num_reviews": {
+            "mean": 172.0,
+            "std": 85.84870412533901,
+            "min": 80.0,
+            "max": 300.0
+        },
+        "stock": {
+            "mean": 71.0,
+            "std": 74.19568720619817,
+            "min": 15.0,
+            "max": 200.0
+        },
+        "final_price": {
+            "mean": 2496.65,
+            "std": 4995.8962834510485,
+            "min": 4.75,
+            "max": 11400.0
+        },
+        "review_score": {
+            "mean": 22.16737831931055,
+            "std": 1.8455765450623385,
+            "min": 20.069119347259697,
+            "max": 24.0833616006423
+        },
+        "price_per_review": {
+            "mean": 31.673320235256455,
+            "std": 65.25003668424546,
+            "min": 0.033112582781456956,
+            "max": 148.14814814814815
+        },
+        "brand_popularity": {
+            "mean": 177.5,
+            "std": 98.10708435174291,
+            "min": 80.0,
+            "max": 300.0
+        }
+    },
+    "pricing_insights.json": [
+        "Average product price in dataset: 2655.00"
+    ],
+    "anomaly_report.json": []
+}

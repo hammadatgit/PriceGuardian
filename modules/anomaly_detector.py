@@ -4,9 +4,14 @@ import json
 import os
 
 
-def detect_price_anomalies(df):
+def detect_price_anomalies(df, schema):
 
-    price = df["price"]
+    price_col = schema.get("price")
+
+    if not price_col:
+        return pd.DataFrame()
+
+    price = df[price_col]
 
     mean = price.mean()
     std = price.std()
@@ -18,19 +23,21 @@ def detect_price_anomalies(df):
     return anomalies
 
 
-def detect_discount_anomalies(df):
+def detect_discount_anomalies(df, schema):
 
-    if "discount" not in df.columns:
+    discount_col = schema.get("discount")
+
+    if not discount_col:
         return pd.DataFrame()
 
-    q1 = df["discount"].quantile(0.25)
-    q3 = df["discount"].quantile(0.75)
+    q1 = df[discount_col].quantile(0.25)
+    q3 = df[discount_col].quantile(0.75)
 
     iqr = q3 - q1
 
     upper = q3 + 1.5 * iqr
 
-    anomalies = df[df["discount"] > upper]
+    anomalies = df[df[discount_col] > upper]
 
     return anomalies
 
