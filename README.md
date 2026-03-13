@@ -107,16 +107,16 @@ README.md
 
 # Features
 
-✔ Dataset management system for multiple CSV datasets
-✔ Dataset health inspection and validation
-✔ Automated preprocessing pipeline using Scikit-Learn
-✔ Feature engineering for pricing analysis
-✔ Exploratory Data Analysis (EDA) visualizations
-✔ Statistical anomaly detection for suspicious prices
-✔ Feature statistical profiling
-✔ Automated pricing insight generation
-✔ Dataset-specific report storage
-✔ CLI-based interactive analytics workflow
+✔ Dataset management system for multiple CSV datasets   
+✔ Dataset health inspection and validation    
+✔ Automated preprocessing pipeline using Scikit-Learn      
+✔ Feature engineering for pricing analysis     
+✔ Exploratory Data Analysis (EDA) visualizations     
+✔ Statistical anomaly detection for suspicious prices     
+✔ Feature statistical profiling     
+✔ Automated pricing insight generation    
+✔ Dataset-specific report storage    
+✔ CLI-based interactive analytics workflow    
 
 ---
 
@@ -349,3 +349,4 @@ PriceGuardian — ML Roadmap Portfolio Project
 Hands-on Python project focused on **data analytics pipelines, pricing anomaly detection, and automated insight generation.**
 
 ---
+
